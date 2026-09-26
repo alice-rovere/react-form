@@ -8,13 +8,6 @@ export default function Exer1() {
   const [campi, setCampi] = useState(initialState);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  // function handleSetCampi(e) {
-  //   const { value, nome } = e.target;
-  //   setCampi((actual) => ({
-  //     ...actual,
-  //     [nome]: value,
-  //   }));
-  // }
   function handleSubmit(e) {
     e.preventDefault;
     setCampi(initialState);
@@ -24,7 +17,7 @@ export default function Exer1() {
   return (
     <div className="container">
       {isSubmitted || (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={(e) => handleSubmit(e)}>
           <label className="form-label" htmlFor="nome">
             Nome
           </label>
